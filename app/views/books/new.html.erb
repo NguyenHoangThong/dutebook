@@ -1,0 +1,32 @@
+<div class="page-header"><h1>Upload Book</h1></div>
+<div class="col-md-8 col-md-offset-2">
+  <%= simple_form_for @book do |f| %>
+  <%= render 'errors', object: @book %>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :facility %>
+    <%= f.select :facility, options_for_select(@Fcl) %>
+    
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :document %>
+    <%= f.file_field :document, class: 'form-control'%>
+  </div>
+
+  <%= f.submit 'Upload', class: 'btn btn-primary' %>
+<% end %>
+</div>

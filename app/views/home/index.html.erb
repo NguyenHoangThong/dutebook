@@ -1,0 +1,44 @@
+<div class="row">
+	<p class="text" style="font-size:2em;"><%= @it.first.facility.upcase %></p>
+	<% @it.each do |it| %>			
+        	<div class="col-sm-4">
+          		<div class="well" style="text-align: center;">					
+          			<div class="media-object" style="display: table-cell;vertical-align: middle;max-width: 100%;max-height: 100%;">
+		             <%= image_tag(it.image.url, class: 'media-object',:width => 260, :height => 340, :title => it.title)%>
+		             </div>
+		            <p><%= it.title.capitalize %></p> 
+		            <p><%= link_to "Click for watch more" , home_show_path(id: it.id) %></p> 
+          		</div>
+        	</div>      
+    <% end %>      
+</div> 
+<hr>
+<div class="row">
+	<p class="text" style="font-size:2em;"><%= @dt.first.facility.upcase %></p>
+	<% @dt.each do |it| %>			
+        	<div class="col-sm-4">
+          		<div class="well" style="text-align: center;">					
+          			<div class="media-object" style="display: table-cell;vertical-align: middle;max-width: 100%;max-height: 100%;">
+		             <%= image_tag(it.image.url, class: 'media-object',:width => 260, :height => 340, :title => it.title)%>
+		             </div>
+		            <p><%= it.title.capitalize %></p> 
+		            <p><%= link_to "Click for watch more" , home_show_path(id: it.id) %></p>           
+          		</div>
+        	</div>      
+    <% end %>      
+</div> 
+<hr>
+<div class="row">
+	<p class="text" style="font-size:2em;"><%= @tdh.first.facility.upcase %></p>
+	<% @tdh.each do |it| %>			
+        	<div class="col-sm-4">
+          		<div class="well" style="text-align: center;">					
+          			<div class="media-object" style="display: table-cell;vertical-align: middle;max-width: 100%;max-height: 100%;">
+		             <%= image_tag(it.image.url, class: 'media-object',:width => 260, :height => 340, :title => it.title)%>
+		             </div>
+		            <p><%= it.title.capitalize %></p> 
+		            <p><%= link_to "Click for watch more" , home_show_path(id: it.id) %></p> 
+          		</div>
+        	</div>      
+    <% end %>      
+</div> 

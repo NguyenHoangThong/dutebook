@@ -1,0 +1,37 @@
+<h3>
+	THONG TIN SACH
+</h3>
+<div class="row">
+	<div class="col-md-4">
+		<div class="col-md-9">
+			<p> <span class="col-md-6">Ten Sach:</span> <b class="col-md-6"><%= @book.title.upcase %></b> </p>
+		</div>
+		<br>
+		<div class="col-md-9">
+			<p> <span class="col-md-6">Khoa:</span> <b class="col-md-6"><%= @book.facility %></b> </p>
+		</div>
+		<br>
+		<div class="col-md-9">
+			<p> <span class="col-md-6">Mo Ta:</span> <i class="col-md-6"><%= @book.content %></i> </p>
+		</div>
+		
+	</div>
+	<div class="col-md-8">
+	<div class="col-md-10 col-md-offset-1" style="max-height: 100%; max-width: 100%">
+	   <%=image_tag(@book.image.url, class: 'media-object',:width => 320, :height => 420, :title => @book.title) %>
+		
+	</div>	
+	</div>
+
+	<div class="col-md-9">
+		<% if current_user %>
+			
+			<%= link_to "Xem sach", @book.document.url,target: "blank" %>
+			<%= link_to "Tai sach", @book.document.url %>
+		<% else %>
+		    <p>Ban can dang nhap de xem va download sach <span><%= link_to "Dang nhap tai day", new_user_session_path %></span></p>
+		    <p>Neu ban chua co tai khoan <span><%= link_to "Dang ky tai day", new_user_registration_path %></span></p>
+		<% end %>
+	<div>
+</div>
+<%= link_to "Back", :back %>

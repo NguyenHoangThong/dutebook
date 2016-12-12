@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+	<h2>NEW BOOK</h2>
+</div>
+<div class="list-group">
+<% @book= Book.order(created_at: :desc).limit(10) %>
+<% @book.each do |book| %>
+<%= link_to book.title.capitalize , home_show_path(id: book.id), :class =>"list-group-item" %>
+<% end %>
+  
+</div>
+<!--a href="#" class="list-group-item">First item</a>
+  <!--a href="#" class="list-group-item">Second item</a>
+  <!--a href="#" class="list-group-item">Third item</a-->

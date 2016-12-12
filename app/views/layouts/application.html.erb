@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DemoRailAdmin</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
+
+  </head>
+
+  <body>
+  	<%= render 'layouts/header' %>
+    
+    <div class="container-fluid">
+    	<div class="row content" style="padding: 2%">
+    		<div class="col-md-3 sidenav well" style="height: 100%;">
+      				<%= render 'layouts/left' %>
+      				<%= render 'layouts/leftbot' %>
+    		</div>
+    		<div class="col-md-9" style="max-height: 100%; padding-left: 2%">
+          
+    			<%= yield %>
+    		</div>	
+    	</div>
+    </div>
+    <footer class="container-fluid text-center well">
+      <p>Footer Text</p>
+    </footer>
+  </body>
+</html>

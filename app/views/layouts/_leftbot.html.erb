@@ -1,0 +1,16 @@
+<div style="text-align: center;">
+	<h2>NEW USER</h2>
+</div>
+<div class="list-group">
+<% @user= User.order(created_at: :desc).limit(15) %>
+<% @user.each do |user| %>
+	<div class="list-group-item">
+	<div style="display: inline-block;">
+	<%= image_tag(user.avatar.url, size: "40x40" ,class: "img-circle") %>
+	<%= user.username.capitalize  %>
+	</div>
+	<p><%= user.created_at %></p>
+	</div>
+<% end %>
+  
+</div>
