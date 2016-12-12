@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'home/show'
   get 'home/search'
   get 'home/faci'
-  
+  get 'home/index'
   
   #delete 'books/destroy'
   resource :books
