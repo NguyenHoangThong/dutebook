@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'books/index'
   get 'books/new'
-  get 'books/show'
+  #get 'books/show'
   get 'home/video'
   get 'home/show'
   get 'home/search'

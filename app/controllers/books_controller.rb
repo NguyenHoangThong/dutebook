@@ -3,11 +3,7 @@ class BooksController < ApplicationController
 	#resources :book
 	#before_action :find_user, only: [:show]
 
-  def show
-  	
-  	#@book=Book.find(books_params[:id])
-  	@book = Book.where(id: params[:id]).first
-  end
+  
   
   def index
     @books = current_user.books.all
