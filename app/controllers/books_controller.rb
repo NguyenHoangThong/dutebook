@@ -11,7 +11,7 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    @Fcl=["Cong Nghe Thong Tin","Dien Tu Vien Thong","Tu Dong Hoa"]
+    @Fcl=["Cong Nghe Thong Tin","Dien Tu Vien Thong","Tu Dong Hoa","Co Khi","Xay Dung","Kien Truc","Co Dien Tu","Moi Truong","Khoa Hoa","Quan Ly Du An","Tai Lieu Tieng Anh","--Orther--"]
   end
 
   def create

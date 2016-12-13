@@ -28,7 +28,7 @@
 		<% if current_user %>
 			
 			<%= link_to "Xem sach", @book.document.url,target: "blank" %>
-			<%= link_to "Tai sach", @book.document.url %>
+			<%= link_to "Tai sach", @book.document_file_name%>
 		<% else %>
 		    <p>Ban can dang nhap de xem va download sach <span><%= link_to "Dang nhap tai day", new_user_session_path %></span></p>
 		    <p>Neu ban chua co tai khoan <span><%= link_to "Dang ky tai day", new_user_registration_path %></span></p>
